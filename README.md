@@ -14,7 +14,8 @@ SECCIONES FUNCIONALES
 <img width="1920" height="906" alt="image" src="https://github.com/user-attachments/assets/fccb3417-fd1e-4f04-bc80-4bcd6946a410" />
 
 lOGIN 
-<img width="1920" height="951" alt="image" src="https://github.com/user-attachments/assets/448430f3-81a0-44c3-ac55-45b9a1d3455a" />
+<img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/b107d1f5-409d-47a1-9f9e-1cf96e839af2" />
+
 
 
 
