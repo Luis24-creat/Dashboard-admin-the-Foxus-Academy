@@ -1,0 +1,250 @@
+/* Estilos para la sección de pagos */
+#pago-section {
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    margin: auto;
+    margin-left: 320px ;
+    width: 90%;
+    max-width: 1500px;
+}
+
+#pago-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#pago-section label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#metodoFiltro-pago {
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+.table-container-pago {
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+
+#pagosTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#pagosTable th,
+#pagosTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#pagosTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+#pagosTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#pagosTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para los botones de acción */
+.btn-ver,
+.btn-recibo {
+    padding: 6px 12px;
+    margin-right: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-ver {
+    background-color: #007bff;
+}
+
+.btn-recibo {
+    background-color: #28a745;
+}
+
+.btn-ver:hover {
+    background-color: #0056b3;
+}
+
+.btn-recibo:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el modal */
+.modal-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.btn-cerrar-Pago {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-cerrar-Pago:hover {
+    background-color: #0056b3;
+}
+
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+    #pago-section {
+      margin-left: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .table-container-pago {
+      margin-right: 0;
+    }
+  
+    #pagosTable th, #pagosTable td {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .btn-ver, .btn-recibo {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .modal-content h2 {
+      font-size: 18px;
+    }
+  
+    .modal-content p {
+      font-size: 14px;
+    }
+  
+    .btn-cerrar-Pago {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #pago-section {
+      padding: 15px;
+      margin-left: 0;
+    }
+  
+    .table-container-pago {
+      margin-right: 0;
+      overflow-x: auto;
+    }
+  
+    #pagosTable th, #pagosTable td {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .btn-ver, .btn-recibo {
+      font-size: 11px;
+      padding: 5px 8px;
+    }
+  
+    .modal-content {
+      max-width: 100%;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #pago-section {
+      padding: 10px;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .table-container-pago {
+      margin-right: 0;
+    }
+  
+    #pagosTable th, #pagosTable td {
+      padding: 6px;
+      font-size: 11px;
+    }
+  
+    .btn-ver, .btn-recibo {
+      font-size: 10px;
+      padding: 4px 6px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .modal-content h2 {
+      font-size: 16px;
+    }
+  
+    .modal-content p {
+      font-size: 12px;
+    }
+  
+    .btn-cerrar-Pago {
+      font-size: 11px;
+      padding: 6px 12px;
+    }
+  }

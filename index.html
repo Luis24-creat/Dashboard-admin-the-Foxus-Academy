@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/Cliente.css">
+    <link rel="stylesheet" href="assets/css/Docente.css">
+    <link rel="stylesheet" href="assets/css/Certificados.css">
+    <link rel="stylesheet" href="assets/css/Becas.css">
+    <link rel="stylesheet" href="assets/css/Recursos.css">
+    <link rel="stylesheet" href="assets/css/Pagos.css">
+    <link rel="stylesheet" href="assets/css/Estadisticas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navegación ================ -->
+<div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name=""></ion-icon>
+                    </span>
+                    <span class="title">Foxus Academy</span>
+                </a>
+            </li>       
+
+            <li>
+                <a href="#" onclick="mostrarTablero()">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title" onclick="">Tablero</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarAdministradores()">
+                    <span class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <span class="title">Administradores</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="MostrarClientes()">
+                    <span class="icon" >
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                    </span>
+                    <span class="title">Clientes</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="Mostrardocente()">
+                    <span class="icon">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    <span class="title">Docentes</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarcertificados()">
+                    <span class="icon">
+                        <ion-icon name="checkbox-outline"></ion-icon>
+                    </span>
+                    <span class="title">Certificados</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarBecas()">
+                    <span class="icon">
+                        <ion-icon name="ribbon-outline"></ion-icon>
+                    </span>
+                    <span class="title">Becas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarRecursos()">
+                    <span class="icon">
+                        <ion-icon name="film-outline"></ion-icon>
+                    </span>
+                    <span class="title">Recursos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarPagos()">
+                    <span class="icon">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </span>
+                    <span class="title">Pagos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="mostrarEstadisticas()">
+                    <span class="icon">
+                        <ion-icon name="cellular-outline"></ion-icon>
+                    </span>
+                    <span class="title">Estadisticas</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- ========================= Principal ==================== -->
+    <div class="main">
+        <div class="topbar" >
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Buscar aquí">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+
+            <div class="user">
+                <img src="assets/imgs/customer01.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- ======================= Tarjetas ================== -->
+        <div class="cardBox" >
+            <div class="card">
+                <div> 
+                    <div class="numbers">1,504</div>
+                    <div class="cardName">Vistas Diarias</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">80</div>
+                    <div class="cardName">Ventas</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">284</div>
+                    <div class="cardName">Comentarios</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">$7,842</div>
+                    <div class="cardName">Ganancias</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="cash-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================ Lista de Detalles de Pedidos ================= -->
+        <div class="details" >
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Pedidos Recientes</h2>
+                    <a href="#" class="btn">Ver Todos</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>Precio</td>
+                            <td>Pago</td>
+                            <td>Estado</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Refrigerador Star</td>
+                            <td>$1200</td>
+                            <td>Pagado</td>
+                            <td><span class="status delivered">Entregado</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Portátil Dell</td>
+                            <td>$110</td>
+                            <td>Deuda</td>
+                            <td><span class="status pending">Pendiente</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Reloj Apple</td>
+                            <td>$1200</td>
+                            <td>Pagado</td>
+                            <td><span class="status return">Devuelto</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Zapatillas Adidas</td>
+                            <td>$620</td>
+                            <td>Deuda</td>
+                            <td><span class="status inProgress">En Proceso</span></td>
+                        </tr>
+
+                        <!-- Repetición de más filas similares -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ================= Nuevos Clientes ================ -->
+            <div class="recentCustomers">
+                <div class="cardHeader">
+                    <h2>Clientes Recientes</h2>
+                </div>
+
+                <table>
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>David <br> <span>Italia</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Amit <br> <span>India</span></h4>
+                        </td>
+                    </tr>
+
+                    <!-- Repetición de más filas similares -->
+                </table>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Sección Administradores -->
+   <div id="admin-section" style="display:none;">
+    <div class="admin-header">
+        <h2>Gestor de Administradores</h2>
+        <button class="btn-nuevo" onclick="mostrarModal()">Nuevo Administrador</button>
+    </div>
+
+    <div class="table-container">
+        <table id="adminTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>DNI</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <!-- Los datos se cargarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+     
+
+<div id="modal" class="modal" style="display: none;" >
+    <div class="modal-content" >
+        <h2>Nuevo Administrador</h2>
+        <form id="adminForm">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label>Apellido:</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label>Correo:</label>
+                <input type="email" id="correo" required>
+            </div>
+            <div class="form-group">
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label>DNI:</label>
+                <input type="text" id="dni" required>
+            </div>
+            <button type="submit" class="btn-nuevo" onclick="agregarAdministrador()">Guardar</button>
+            <!-- Botón para guardar la edición de un administrador -->
+            <button type="button" id="btnGuardarEdicion" class="btn-nuevo" onclick="guardarEdicion()" style="display: none;">Guardar Edición</button>
+            <button type="button" class="btn" onclick="cerrarModal()">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Sección Clientes -->
+<div id="client-section" style="display:none;">
+    <div class="client-header">
+        <h2>Gestor de Clientes</h2>
+        <button class="btn-nuevoclient" onclick="mostrarmodalcliente()">Nuevo cliente</button>
+    </div>
+
+    <div class="table-container-client">
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>DNI</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <!-- Los datos se cargarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+ 
+
+   <!-- modal cliente -->
+<div id="modal-cliente" class="modal-cliente" style="display: none;" >
+    <div class="modal-content-cliente" >
+        <h2>Nuevo Cliente</h2>
+        <form id="adminForm-cliente">
+            <div class="form-group-cliente">
+                <label>Nombre:</label>
+                <input type="text" id="nombre-cliente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>Apellido:</label>
+                <input type="text" id="apellido-cliente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>Correo:</label>
+                <input type="email" id="correo-cliente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento-cliente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>DNI:</label>
+                <input type="text" id="dni-cliente" required>
+            </div>
+            <button type="submit" class="btn-nuevo-cliente" onclick="agregarcliente()">Guardar</button>
+            <button type="button" class="btn-cliente" onclick="cerrarmodalcliente()">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Sección Docentes -->
+<div id="docente-section" style="display:none;">
+    <div class="docente-header">
+        <h2>Gestor de Docentes</h2>
+        <button class="btn-nuevodocente" onclick="mostrarmodalDocentes()">Nuevo cliente</button>
+    </div>
+
+    <div class="table-container-docente">
+        <table id="docenteTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>DNI</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <!-- Los datos se cargarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+ 
+
+   <!-- modal docente -->
+<div id="modal-docente" class="modal-docente" style="display: none;" >
+    <div class="modal-content-docente" >
+        <h2>Nuevo docente</h2>
+        <form id="adminForm-docente">
+            <div class="form-group-docente">
+                <label>Nombre:</label>
+                <input type="text" id="nombre-docente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>Apellido:</label>
+                <input type="text" id="apellido-docente" required>
+            </div>
+            <div class="form-group-cliente">
+                <label>Correo:</label>
+                <input type="email" id="correo-docente" required>
+            </div>
+            <div class="form-group-docente">
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento-docente" required>
+            </div>
+            <div class="form-group-docente">
+                <label>DNI:</label>
+                <input type="text" id="dni-docente" required>
+            </div>
+            <button type="submit" class="btn-nuevo-docente" onclick="agregardocente()">Guardar</button>
+            <button type="button" class="btn-docente" onclick="cerrarmodaldocente()">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sección Certificados -->
+<div id="certificado-section" style="display: none;">
+    <h2>Gestor de Certificados</h2>
+    <p></p>
+
+    <!-- Filtro por categoría -->
+    <label for="categoriaFiltro">Filtrar por Categoría:</label>
+    <select id="categoriaFiltro">
+        <option value="Todos">Todos los Cursos</option>
+        <option value="Programación">Programación</option>
+        <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+        <option value="Web">Web</option>
+    </select>
+
+    <!-- Tabla de certificados -->
+    <div class="table-container-certificado">
+        <table id="certificadosTable">
+            <thead>
+                <tr>
+                    <th>ID Certificado</th>
+                    <th>ID Usuario</th>
+                    <th>Nombre del Curso</th>
+                    <th>Fecha de Finalización</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se cargarán dinámicamente desde JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal de detalles del certificado -->
+<div id="detalleModal-certificado" class="modal-detalle-certificado" style="display: none;">
+    <div class="modal-content-detalle">
+        <h2>Detalles del Certificado</h2>
+        <p><strong>ID Certificado:</strong> <span id="detalleIdCertificado"></span></p>
+        <p><strong>Usuario:</strong> <span id="detalleUsuario"></span></p>
+        <p><strong>Curso:</strong> <span id="detalleCurso"></span></p>
+        <p><strong>Categoría:</strong> <span id="detalleCategoria"></span></p>
+        <p><strong>Docente:</strong> <span id="detalleDocente"></span></p>
+        <p><strong>Fecha de Finalización:</strong> <span id="detalleFecha"></span></p>
+        <button onclick="cerrarModalcertificado()" class="btn-cerrar-certificado">Cerrar</button>
+    </div>
+</div>
+
+
+<!-- Sección Pagos -->
+<div id="pago-section" style="display: none;">
+    <h2>Gestor de Pagos</h2>
+    <p></p>
+
+    <!-- Filtro por método de pago -->
+    <label for="metodoFiltro-pago">Filtrar por Método de Pago:</label>
+    <select id="metodoFiltro-pago">
+        <option value="Yape">Yape</option>
+        <option value="Paypal">Paypal</option>
+        <option value="Tarjeta">Tarjeta</option>
+        <option value="pagoenEfectivo">pagoenEfectivo</option>
+        <!-- Agregar más métodos si es necesario -->
+    </select>
+
+    <!-- Tabla de pagos -->
+    <div class="table-container-pago">
+        <table id="pagosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ID Usuario</th>
+                    <th>Monto (S/)</th>
+                    <th>Fecha</th>
+                    <th>Codigo de pago</th>
+                    <th>Método de Pago</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se cargarán dinámicamente desde JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal de detalles del pago -->
+<div id="detalleModal-pago" class="modal-pago" style="display: none;">
+    <div class="modal-content">
+        <h2>Detalles del Pago</h2>
+        <p><strong>ID:</strong> <span id="detalleIdPago"></span></p>
+        <p><strong>Persona:</strong> <span id="detallePersonaPago"></span></p>
+        <p><strong>Correo:</strong> <span id="detalleCorreoPago"></span></p>
+        <p><strong>Monto (S/):</strong> <span id="detalleMontoPago"></span></p>
+        <p><strong>Fecha:</strong> <span id="detalleFechaPago"></span></p>
+        <p><strong>Codigo de pago:</strong> <span id="detalleCodigoPago"></span></p>
+        <p><strong>Método de Pago:</strong> <span id="detalleMetodoPago"></span></p>
+        <p><strong>Estado:</strong> <span id="detalleEstadoPago"></span></p>
+        <button onclick="cerrarModalPago()" class="btn-cerrar-Pago">Cerrar</button>
+    </div>
+</div>
+
+<section id="estadisticas"  style="display: none;"  >
+    <h2>Estadísticas Mensuales</h2>
+    <div class="charts-grid">
+        <div class="chart-container">
+            <h3>Pagos Mensuales</h3>
+            <canvas id="pagosMensualesChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Usuarios Registrados</h3>
+            <canvas id="usuariosRegistradosChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<div class="container-recurso" id="container-recursos" style="display: none;">
+    <h1>Gestor de Recursos</h1>
+    <nav class="breadcrumb">Home / Recursos</nav>
+
+    <div class="actions">
+      <button id="add-resource-btn" class="btn btn-primary" onclick="mostrarmodalrecursos()">Nuevo Recurso</button>
+      <button id="add-route-btn" class="btn btn-secondary">Nueva Ruta</button>
+    </div>
+
+    <table class="resource-table">
+      <thead>
+        <tr>
+          <th>ID Recurso</th>
+          <th>Curso</th>
+          <th>Tipo de Recurso</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="resource-table-body">
+        <!-- Las filas se generarán dinámicamente -->
+      </tbody>
+    </table>
+   
+   
+     <!-- Modal para añadir recurso -->
+    <div id="modal-recursos" class="modal hidden" style="display: none;" >
+      <div class="modal-content">
+        <h2>Añadir Nuevo Recurso</h2>
+        <form id="add-resource-form">
+          <label for="resource-id">ID Recurso:</label>
+          <input type="text" id="resource-id" required>
+  
+          <label for="course-name">Curso:</label>
+          <input type="text" id="resource-id" required>
+
+        <label for="resource-type">Tipo de Recurso:</label>
+        <input type="text" id="resource-type" required>
+
+        <label for="resource-description">Descripción:</label>
+        <textarea id="resource-description" required></textarea>
+
+        <button type="submit" class="btn btn-primary" onclick="agregarrecurso(event)">Guardar</button>
+        <button type="button" id="cancel-btn" class="btn btn-secondary" onclick="cerrarmodalrecursos()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-becas"  id="container-becas" style="display: none;">
+    <div class="header-becas">
+        <h1>Gestor de Becas</h1>
+        <nav class="breadcrumb-becas"> Becas registrados</nav>
+        <div class="buttons-becas">
+            <!-- Botón para abrir el modal -->
+            <button class="btn-nueva-beca" onclick="mostrarmodalbecas()">Nueva Beca</button>
+        </div>
+    </div>
+
+    <!-- Tabla de Becas -->
+    <table class="tabla-becas">
+        <thead>
+            <tr>
+                <th>ID Beca</th>
+                <th>Curso</th>
+                <th>Tipo de Beca</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-becas-body">
+            <!-- Las becas se agregarán aquí -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para agregar nueva beca -->
+<div id="modal-beca" class="modal-becas" style="display: none;">
+    <div class="modal-contenido-beca">
+        <span class="cerrar-becas" onclick="cerrarmodalrecursos()">&times;</span>
+        <h2>Agregar Nueva Beca</h2>
+        <form id="form-becas">
+            <label for="id-beca">ID Beca:</label>
+            <input type="text" id="id-beca" required><br>
+
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" required><br>
+
+            <label for="tipo-beca">Tipo de Beca:</label>
+            <input type="text" id="tipo-beca" required><br>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" required></textarea><br>
+
+            <button type="submit" onclick="agregarBeca(event)">Agregar Beca</button>
+        </form>
+    </div>
+</div>
+
+</div>
+
+  
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/Cliente.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/Docente.js"></script>
+    <script src="assets/js/Certificados.js"></script>
+    <script src="assets/js/Becas.js"></script>
+    <script src="assets/js/Recursos.js"></script>
+    <script src="assets/js/Pagos.js"></script>
+    <script src="assets/js/Estadisticas.js"></script>
+    <script src="script.js"></script>
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

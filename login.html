@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login registro</title>
+    <link rel="stylesheet" href="assets/css/login y registro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="logo.png" alt="logo">
+            <form id="login-form">
+                <h2>Iniciar sesión</h2>
+                <input type="email" id="login-email" placeholder="Correo electrónico" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+                <p>¿No tienes una cuenta? <a href="#" id="show-register">Registrarse</a></p>
+            </form>
+
+            <form id="register-form" style="display:none;">
+                <h2>Registro</h2>
+                <input type="text" id="reg-username" placeholder="Nombre de usuario" required>
+                <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+                <input type="password" id="reg-password" placeholder="Contraseña" required>
+                <button type="submit">Registrar</button>
+                <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Iniciar sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/login y registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+.docente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin: 0px;
+    margin-left: 320px;
+  }
+  
+  .docente-header h2 {
+    margin: 0;
+    color: #000000;
+  }
+  
+  .btn-nuevodocente {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-nuevodocente:hover {
+    background-color: #218838;
+  }
+  
+  /* Tabla de docentes */
+  .table-container-docente {
+    margin: 20px;
+    overflow-x: auto;
+    border-radius: 5px;
+    margin-left: 320px;
+  }
+  
+  #docenteTable {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  #docenteTable th, #docenteTable td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  #docenteTable th {
+    background-color:#222;
+    color: white;
+  }
+  
+  #docenteTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #docenteTable td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #docenteTable th, #docenteTable td {
+    text-align: center;
+  }
+  
+  #docenteTable button {
+    padding: 6px 12px;
+    margin: 0 3px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-ver-cliente {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .btn-editar-cliente {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .btn-eliminar-cliente {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-ver-cliente:hover {
+    background-color: #138496;
+  }
+  
+  .btn-editar-cliente:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-eliminar-cliente:hover {
+    background-color: #c82333;
+  }
+  
+ /* Modal para Docente */
+.modal-docente {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contenido del Modal Docente */
+  .modal-content-docente {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: 490px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Animación de aparición */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilos de los elementos del formulario en el Modal Docente */
+  .form-group-docente {
+    margin-bottom: 15px;
+  }
+  
+  .form-group-docente label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group-docente input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group-docente input:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /* Botón Guardar en el Modal Docente */
+  .btn-nuevo-docente {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
+  }
+  
+  .btn-nuevo-docente:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Botón Cancelar en el Modal Docente */
+  .btn-docente {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-docente:hover {
+    background-color: #c0392b;
+  } 
+  
+  /* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+  .docente-header {
+    margin-left: 20px;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .docente-header h2 {
+    font-size: 20px;
+  }
+
+  .btn-nuevodocente {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .table-container-docente {
+    margin-left: 20px;
+  }
+
+  #docenteTable th, #docenteTable td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #docenteTable button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .modal-content-docente {
+    width: 90%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .form-group-docente input {
+    padding: 8px;
+  }
+
+  .btn-nuevo-docente, .btn-docente {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .docente-header {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .btn-nuevodocente {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .table-container-docente {
+    margin-left: 0;
+    overflow-x: auto;
+  }
+
+  #docenteTable th, #docenteTable td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  #docenteTable button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .modal-content-docente {
+    width: 80%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .form-group-docente input {
+    padding: 8px;
+  }
+
+  .btn-nuevo-docente, .btn-docente {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .docente-header {
+    padding: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .docente-header h2 {
+    font-size: 18px;
+  }
+
+  .btn-nuevodocente {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .table-container-docente {
+    margin-left: 0;
+  }
+
+  #docenteTable th, #docenteTable td {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  #docenteTable button {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .modal-content-docente {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .form-group-docente input {
+    padding: 6px;
+  }
+
+  .btn-nuevo-docente, .btn-docente {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
